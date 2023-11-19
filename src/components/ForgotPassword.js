@@ -12,7 +12,7 @@ const ForgotPassword = () => {
     let [spin,setSpin]=useState(false);
 
     const uservalid = async () => {
-        const response = await fetch(`http://localhost:8000/forgotpassword/${id}/${token}`, {
+        const response = await fetch(`https://ecommerce-backend-t6kq.onrender.com/forgotpassword/${id}/${token}`, {
             method: "GET",
             headers: {
                 "Access-Control-Allow-Origin": true,
@@ -37,7 +37,7 @@ const ForgotPassword = () => {
             toast.error("Password is required!!")
         }
         else {
-            const res = await fetch(`http://localhost:8000/${id}/${token}`, {
+            const res = await fetch(`https://ecommerce-backend-t6kq.onrender.com/${id}/${token}`, {
                 method: "POST",
                 headers: {
                     "Access-Control-Allow-Origin": true,

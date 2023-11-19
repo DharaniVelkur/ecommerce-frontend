@@ -11,7 +11,7 @@ const PasswordReset = () => {
     const sendLink = async (e) => {
         setSpin(true);
         e.preventDefault();
-        const res = await fetch('http://localhost:8000/sendpasswordlink', {
+        const res = await fetch('https://ecommerce-backend-t6kq.onrender.com/sendpasswordlink', {
             method: 'POST',
             headers: {
                 "Access-Control-Allow-Origin": true,

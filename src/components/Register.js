@@ -16,7 +16,7 @@ const Register = () => {
     const handleregister =async (e)=>{
         e.preventDefault();
         setSpin(true);
-        const register = await fetch("http://localhost:8000/register",{
+        const register = await fetch("https://ecommerce-backend-t6kq.onrender.com/register",{
             method: "POST",
             headers: {
                 "Access-Control-Allow-Origin": true,

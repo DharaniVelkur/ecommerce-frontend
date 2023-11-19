@@ -13,7 +13,7 @@ const Header = () => {
 
   const validuser = async () => {
     let token =localStorage.getItem("tokenofuser");
-    const response =await fetch('http://localhost:8000/validuser',{
+    const response =await fetch('https://ecommerce-backend-t6kq.onrender.com/validuser',{
       method: 'GET',
       headers:{
         Authorization:token,
@@ -37,7 +37,7 @@ const Header = () => {
 
   const handlelogout = async () => {
     let token = localStorage.getItem("tokenofuser");
-    const logoutuser = await fetch("http://localhost:8000/logout", {
+    const logoutuser = await fetch("https://ecommerce-backend-t6kq.onrender.com/logout", {
         method: "GET",
         headers: {
             "Access-Control-Allow-Origin": true,

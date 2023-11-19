@@ -13,7 +13,7 @@ const Login = () => {
 
     const validuser = async () => {
         let token =localStorage.getItem("tokenofuser");
-        const response =await fetch('http://localhost:8000/validuser',{
+        const response =await fetch('https://ecommerce-backend-t6kq.onrender.com/validuser',{
           method: 'GET',
           headers:{
             Authorization:token,
@@ -35,7 +35,7 @@ const Login = () => {
     
     const handlelogin =async () =>{
         setSpin(true);
-        const login = await fetch('http://localhost:8000/login',{
+        const login = await fetch('https://ecommerce-backend-t6kq.onrender.com/login',{
             method: 'POST',
             headers:{
                 "ACCESS-CONTROL-ALLOW-ORIGIN":true,
