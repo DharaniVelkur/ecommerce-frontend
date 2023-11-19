@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Outlet } from "react-router-dom";
+import Header from "./components/Header";
+import { useEffect, useState } from "react";
+import NoteSate from "./context/NoteSate";
+import {Provider} from  "react-redux";
+import appStore from "./utils/appStore";
 
 function App() {
+  const [selectedoption,setSelectedoption] = useState("Bangalore");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Provider store={appStore}>
+    <NoteSate>
+    <Header selectedoption={selectedoption} setSelectedoption={setSelectedoption}/>
+    <Outlet />
+    </NoteSate>
+    </Provider>
+    </>
   );
 }
 
-export default App;
+export default App; 

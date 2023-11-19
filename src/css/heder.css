@@ -1,0 +1,16 @@
+.logo{
+    width: 40px;
+}
+.nav-items{
+    gap:0 3rem ;
+}
+.header{
+    position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  
+}
+.header:hover{
+    box-shadow: 0 2px 2px grey;
+}
